@@ -15,13 +15,15 @@ def combine_odd_list(list1, list2):
     combine_list = []
 
     for number in list1:
-        if number % 2 == 0:
+        if number % 2 >= 0.01:
             combine_list.append(number)
 
     for number in list2:
-        if number % 2 == 0:
+        if number % 2 >= 0.01:
             combine_list.append(number)
     return combine_list
 
 list1 = [10, 20, 25, 30, 35]
 list2 = [40, 45, 60, 75, 90]
+
+print("\033[1;32;40mResult List:",combine_odd_list(list1, list2))
